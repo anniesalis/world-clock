@@ -1,0 +1,47 @@
+body {
+  font-family: sans-serif;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 500px;
+  margin: 0;
+  font-size: 30px;
+  line-height: 48px;
+}
+
+h1 h2,
+h3 {
+  color: #231d3c;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/136/327/original/continents-2660928_1280.jpg?1722361492);
+  border-radius: 5px;
+}
+
+.logo {
+  display: block;
+  margin: 30px auto;
+  width: 150px;
+}
+.choose {
+  font-size: 16px;
+  position: relative;
+  left: 145px;
+  padding: 10px;
+  background: aliceblue;
+  border-radius: 6px;
+}
+
+.portfolio {
+  color: grey;
+}
+a {
+  color: aliceblue;
+  font-family: monospace;
+  font-size: 14px;
+}

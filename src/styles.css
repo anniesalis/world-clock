@@ -19,23 +19,27 @@ h3 {
 .container {
   max-width: 400px;
   margin: 0 auto;
-  background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/136/327/original/continents-2660928_1280.jpg?1722361492);
+  background-color: aqua;
   border-radius: 5px;
+  padding: 20px;
 }
 
 .logo {
-  display: block;
-  margin: 30px auto;
-  width: 150px;
+  position: relative;
+  left: 300px;
+  width: 100px;
+}
+img {
+  width: 20px;
 }
 .choose {
-  max-width: 380px;
   font-size: 16px;
   position: relative;
-  left: 145px;
+  left: 15px;
   padding: 10px;
   background: aliceblue;
   border-radius: 6px;
+  width: 350px;
 }
 
 .portfolio {

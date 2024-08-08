@@ -1,6 +1,7 @@
 body {
   font-family: sans-serif;
   padding: 0 20px;
+  background-color: rgb(247, 247, 234);
 }
 
 h1 {
@@ -11,15 +12,14 @@ h1 {
   line-height: 48px;
 }
 
-h1 h2,
-h3 {
-  color: #231d3c;
+h2 {
+  margin: 0;
 }
 
 .container {
   max-width: 400px;
   margin: 0 auto;
-  background-color: aqua;
+  background-color: white;
   border-radius: 5px;
   padding: 20px;
 }
@@ -29,17 +29,33 @@ h3 {
   left: 300px;
   width: 100px;
 }
+.time {
+  font-size: 24px;
+  font-weight: bold;
+}
+.time small {
+  font-size: 14px;
+  vertical-align: middle;
+}
+.date {
+  opacity: 0.7;
+  margin-top: 5px;
+  border-bottom: 1px dashed gray;
+}
 img {
   width: 20px;
 }
-.choose {
+select {
   font-size: 16px;
-  position: relative;
-  left: 15px;
   padding: 10px;
-  background: aliceblue;
+
   border-radius: 6px;
-  width: 350px;
+  width: 100%;
+}
+.city {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .portfolio {

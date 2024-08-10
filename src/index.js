@@ -1,25 +1,51 @@
-setInterval(function () {
-  let lagos = document.querySelector("#lagos");
-  let lagosElement = document.querySelector("#lagos .time");
-  lagosElement.innerHTML = moment()
-    .tz("Africa/Lagos")
-    .format("HH:mm:ss [<small>]A[<small>]");
+function updateTime() {
+  // abuja Nigeria
+  let abujaElement = document.querySelector("#abuja");
+  if (abujaElement) {
+    let abujaDateElement = abujaElement.querySelector(".date");
+    let abujaTimeElement = abujaElement.querySelector(".time");
+    let abujaTime = moment().tz("Africa/Lagos");
 
-  let losAngeles = document.querySelector("#los-angeles");
-  let losAngelesElement = document.querySelector("#los-angeles .time");
-  losAngelesElement.innerHTML = moment()
-    .tz("America/Los_Angeles")
-    .format("HH:mm:ss [<small>]A[<small>]");
+    abujaDateElement.innerHTML = abujaTime.format("MMMM	Do YYYY");
+    abujaTimeElement.innerHTML = abujaTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 
-  let moscow = document.querySelector("#moscow");
-  let moscowElement = document.querySelector("#moscow .time");
-  moscowElement.innerHTML = moment()
-    .tz("Europe/Moscow")
-    .format("HH:mm:ss [<small>]A[<small>]");
-}, 1000);
+  // lisbon
+  let lisbonElement = document.querySelector("#lisbon");
+  if (lisbonElement) {
+    let lisbonDateElement = lisbonElement.querySelector(".date");
+    let lisbonTimeElement = lisbonElement.querySelector(".time");
+    let lisbonTime = moment().tz("Europe/Paris");
 
-let dateElement = document.querySelector("#date");
-dateElement.innerHTML = moment().format("MMMM Do YYYY");
+    lisbonDateElement.innerHTML = lisbonTime.format("MMMM	Do YYYY");
+    lisbonTimeElement.innerHTML = lisbonTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+}
 
-let losAngelesDateElement = document.querySelector("#los-angeles .date");
-losAngelesDateElement.innerHTML = moment().format("MMMM Do YYYY");
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+  let cityTime = moment().tz(cityTimeZone);
+  let citiesElement = document.querySelector("#cities");
+  citiesElement.innerHTML = `
+  <div class="city">
+    <div>
+      <h2>${cityName}</h2>
+      <div class="date">${cityTime.format("MMMM	Do YYYY")}</div>
+    </div>
+    <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format(
+    "A"
+  )}</small></div>
+  </div>
+  `;
+}
+
+updateTime();
+setInterval(updateTime, 1000);
+
+let citiesSelectElement = document.querySelector("#city");
+citiesSelectElement.addEventListener("change", updateCity);

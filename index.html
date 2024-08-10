@@ -1,89 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>SheCodes</title>
     <meta charset="UTF-8" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
-    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
+    <title>World Clock - Matt Delac</title>
   </head>
-
   <body>
     <div class="container">
       <img
-        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/136/788/original/IMG_1506.jpg?1722561465"
-        alt="SheCOdes"
         class="logo"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/136/788/original/IMG_1506.jpg?1722561465"
+        alt="Annie_Salis"
       />
+
       <h1>World Clock</h1>
 
-      <select name="" id="cities">
-        <option value="">Choose City</option>
-        <option value="lagos">Lagos</option>
-        <option value="lisbon">Lisbon</option>
-        <option value="paris">Paris</option>
+      <select id="city">
+        <option value="">Select a city..</option>
+        <option value="Europe/Paris">London</option>
+        <option value="America/New_York">New York</option>
+        <option value="Africa/Ghana">Auckland</option>
+        <option
+          value="
+Africa/Accra"
+        >
+          Accra
+        </option>
+        <option value="Europe/Malta">Malta</option>
       </select>
-      <div class="date" id="date"></div>
-      <div class="city" id="lagos">
-        <h2 class>
-          Lagos
-          <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/137/888/original/NG_flag.png?1723051326"
-            alt="Nigerian_flag"
-          />
-        </h2>
-        <div class="time" id="time"><small>AM</small></div>
-      </div>
-      <div></div>
-      <div class="line"></div>
-      <div class="city" id="los-angeles">
-        <h2 class>
-          Los Angeles
-          <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/137/890/original/usa_flag.png?1723052305"
-            alt="usa_flag"
-          />
-        </h2>
-        <div class="time" id="time"><small>AM</small></div>
-      </div>
-      <div>
-        <div class="date" id="date"></div>
-      </div>
 
-      <div class="city" id="moscow">
-        <h2>
-          Moscow
-          <img
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/137/889/original/Russian_flag.png?1723052294"
-            alt="Russian_flag"
-          />
-        </h2>
-        <div class="time"><small>AM</small></div>
-      </div>
-      <div>
-        <div class="date" id="date"></div>
+      <div id="cities">
+        <div class="city" id="abuja">
+          <div>
+            <h2>
+              Abuja
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/137/888/original/NG_flag.png?1723051326"
+                alt="Nigerian flag"
+              />
+            </h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+        <div class="city" id="lisbon">
+          <div>
+            <h2>
+              Lisbon
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/137/887/original/PT_flag.png?1723051310"
+                alt="Portuguese flag"
+              />
+            </h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
       </div>
     </div>
     <footer>
-      <p>
-        This project was coded by
-        <a href="https://github.com/anniesalis" target="_blank">Annie Salis,</a>
-        available on
-        <a
-          href="https://github.com/anniesalis?tab=repositories"
-          target="_blank"
-        >
-          GitHub</a
-        >
-        and hosted on
-        <a
-          href="https://66a661de07f56f3e636b320f--anniesalis-shecodes-weather-project.netlify.app/?"
-          target="_blank"
-          >Netlify</a
-        >
-      </p>
+      This project was coded by
+      <a href="https://github.com/dashboard"><strong>Annie Salis</strong></a>
+      and is
+      <a href="https://github.com/anniesalis/world-clock" target="_blank">
+        open sourced on GitHub</a
+      >
     </footer>
-
     <script src="src/index.js"></script>
   </body>
 </html>

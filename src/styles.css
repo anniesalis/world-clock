@@ -58,12 +58,12 @@ img {
 }
 
 .time {
-  font-size: 48px;
+  font-size: 45px;
   font-weight: bold;
 }
 
 .time small {
-  font-size: 24px;
+  font-size: 20px;
   vertical-align: middle;
   line-height: 48px;
 }
